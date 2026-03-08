@@ -4,36 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - OmHomeo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h1>Contact Us</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="pages/piles.html">Piles</a></li>
-                <li><a href="pages/fissure.html">Fissure</a></li>
-                <li><a href="pages/fistula.html">Fistula</a></li>
-                <li><a href="pages/skin.html">Skin</a></li>
-                <li><a href="pages/pcos.html">PCOS</a></li>
-                <li><a href="pages/pcod.html">PCOD</a></li>
-                <li><a href="pages/depression.html">Depression</a></li>
-                <li><a href="pages/anxiety.html">Anxiety</a></li>
-                <li><a href="pages/autism.html">Autism</a></li>
-                <li><a href="pages/adhd.html">ADHD</a></li>
-                <li><a href="pages/thyroid.html">Thyroid</a></li>
-                <li><a href="pages/obesity.html">Obesity</a></li>
-                <li><a href="pages/hair-fall.html">Hair Fall</a></li>
-                <li><a href="pages/alopecia.html">Alopecia</a></li>
-                <li><a href="pages/acne.html">Acne</a></li>
-                <li><a href="pages/blemishes.html">Blemishes</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Om Homeo</h1>
+            <nav>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="pages/piles.html">Piles</a></li>
+                    <li><a href="pages/fissure.html">Fissure</a></li>
+                    <li><a href="pages/fistula.html">Fistula</a></li>
+                    <li><a href="pages/skin.html">Skin</a></li>
+                    <li><a href="pages/pcos.html">PCOS</a></li>
+                    <li><a href="pages/pcod.html">PCOD</a></li>
+                    <li><a href="pages/depression.html">Depression</a></li>
+                    <li><a href="pages/anxiety.html">Anxiety</a></li>
+                    <li><a href="pages/autism.html">Autism</a></li>
+                    <li><a href="pages/adhd.html">ADHD</a></li>
+                    <li><a href="pages/thyroid.html">Thyroid</a></li>
+                    <li><a href="pages/obesity.html">Obesity</a></li>
+                    <li><a href="pages/hair-fall.html">Hair Fall</a></li>
+                    <li><a href="pages/alopecia.html">Alopecia</a></li>
+                    <li><a href="pages/acne.html">Acne</a></li>
+                    <li><a href="pages/blemishes.html">Blemishes</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
+    <main class="container" style="margin-top: 100px;">
         <section>
             <h2>Get in Touch</h2>
             <form action="#" method="post">
@@ -46,7 +54,7 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
 
-                <button type="submit">Send Message</button>
+                <button type="submit" class="btn">Send Message</button>
             </form>
         </section>
         <section>
@@ -57,7 +65,9 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 OmHomeo. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2023 Om Homeo. All rights reserved.</p>
+        </div>
     </footer>
     <script src="js/script.js"></script>
 </body>

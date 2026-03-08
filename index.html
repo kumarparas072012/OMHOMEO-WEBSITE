@@ -3,49 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om Homeo - Home</title>
+    <title>Om Homeo - International Homeopathic Clinic | Baddi, Himachal Pradesh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Om Homeo</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="pages/piles.html">Piles</a></li>
-                <li><a href="pages/fissure.html">Fissure</a></li>
-                <li><a href="pages/fistula.html">Fistula</a></li>
-                <li><a href="pages/skin.html">Skin</a></li>
-                <li><a href="pages/pcos.html">PCOS</a></li>
-                <li><a href="pages/pcod.html">PCOD</a></li>
-                <li><a href="pages/depression.html">Depression</a></li>
-                <li><a href="pages/anxiety.html">Anxiety</a></li>
-                <li><a href="pages/autism.html">Autism</a></li>
-                <li><a href="pages/adhd.html">ADHD</a></li>
-                <li><a href="pages/thyroid.html">Thyroid</a></li>
-                <li><a href="pages/obesity.html">Obesity</a></li>
-                <li><a href="pages/hair-fall.html">Hair Fall</a></li>
-                <li><a href="pages/alopecia.html">Alopecia</a></li>
-                <li><a href="pages/acne.html">Acne</a></li>
-                <li><a href="pages/blemishes.html">Blemishes</a></li>
-            </ul>
-        </nav>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="container">
+            <div class="brand">Om Homeo</div>
+            <nav>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#process" class="nav-link">Process</a></li>
+                    <li><a href="#footer" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>Featured Treatments</h2>
-            <p>Explore our range of homeopathic treatments for various health conditions.</p>
-        </section>
-        <section>
-            <h2>Why Choose Homeopathy?</h2>
-            <p>Homeopathy offers a holistic approach to health, focusing on the individual and their unique symptoms.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Om Homeo. All rights reserved.</p>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="glassmorphism-box">
+                <h1>Specialized Homeopathic Care, Globally Delivered</h1>
+                <p>Expert treatment for chronic conditions like Piles and Fissures from our Baddi center to patients worldwide via secure telemedicine and medical logistics.</p>
+                <button class="cta-btn">Schedule Your Consultation →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💊</div>
+                    <h3>Non-Surgical Piles Treatment</h3>
+                    <p>Advanced homeopathic remedies effectively treating piles without surgical intervention, using personalized protocols.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Chronic Fissure Healing</h3>
+                    <p>Specialized treatment for chronic anal fissures with natural remedies that promote long-term healing and comfort.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌍</div>
+                    <h3>Global Online Consultation</h3>
+                    <p>Secure video consultations with Dr. Amarpali connecting patients worldwide through HIPAA/GDPR-compliant telemedicine.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logistics Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <h2>Our Global Delivery Process</h2>
+            <div class="timeline">
+                <div class="timeline-step">
+                    <div class="step-number">1</div>
+                    <h3>Secure Video Consultation</h3>
+                    <p>Connect with Dr. Amarpali via encrypted video call for detailed diagnosis and personalized treatment planning.</p>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-step">
+                    <div class="step-number">2</div>
+                    <h3>Personalized Protocol Design</h3>
+                    <p>Receive a customized homeopathic treatment plan tailored to your specific condition and health profile.</p>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-step">
+                    <div class="step-number">3</div>
+                    <h3>Global Medicine Dispatch</h3>
+                    <p>Baddi-sourced premium medicines shipped securely to your doorstep with international medical logistics.</p>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-step">
+                    <div class="step-number">4</div>
+                    <h3>Continuous Follow-up Support</h3>
+                    <p>Ongoing health monitoring and protocol adjustments through regular telemedicine follow-ups.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Om Homeo Clinic</h3>
+                    <p>✓ HIPAA Compliant</p>
+                    <p>✓ GDPR Compliant</p>
+                    <p>International homeopathic care from Baddi, Himachal Pradesh</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#services" class="footer-link">Services</a></li>
+                        <li><a href="#process" class="footer-link">Our Process</a></li>
+                        <li><a href="https://patient-portal.example.com" target="_blank" class="footer-link portal-link">Access Patient Portal →</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>📍 Baddi, Himachal Pradesh, India</p>
+                    <p>📞 <a href="tel:+91XXXXXXXXXX" class="phone-link">+91-XXXXXXXXXX</a></p>
+                    <p>📧 <a href="mailto:contact@omhomeo.com" class="email-link">contact@omhomeo.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Data Security</h3>
+                    <p>All patient data is encrypted and handled in compliance with HIPAA and GDPR regulations.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Om Homeo Clinic. All rights reserved. | <a href="#" class="footer-link">Privacy Policy</a> | <a href="#" class="footer-link">Terms of Service</a></p>
+            </div>
+        </div>
     </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
