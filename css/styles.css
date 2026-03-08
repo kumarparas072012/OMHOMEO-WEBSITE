@@ -513,6 +513,110 @@ nav {
 .service-card {
     animation: fadeInUp 0.6s ease-out;
 }
+
+/* Specializations Page Styles */
+.spec-hero {
+    margin-top: 80px;
+    background: linear-gradient(135deg, var(--primary-teal), var(--primary-gold));
+    color: var(--white);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.spec-hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.spec-hero p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+.spec-main {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.specializations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.spec-card {
+    background: var(--white);
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.spec-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-teal), var(--primary-gold));
+    transition: left 0.3s ease;
+}
+
+.spec-card:hover::before {
+    left: 0;
+}
+
+.spec-card:hover {
+    border-color: var(--primary-teal);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, rgba(17, 94, 89, 0.05) 0%, rgba(180, 83, 9, 0.05) 100%);
+}
+
+.spec-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.spec-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--primary-teal);
+}
+
+.spec-status {
+    display: inline-block;
+    background: var(--primary-gold);
+    color: var(--white);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.spec-description {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.spec-cta h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-teal);
+    margin-bottom: 1rem;
+}
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -583,5 +687,17 @@ nav {
 
     .footer-content {
         grid-template-columns: 1fr;
+    }
+
+    .specializations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .spec-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .spec-cta h2 {
+        font-size: 1.5rem;
     }
 }
