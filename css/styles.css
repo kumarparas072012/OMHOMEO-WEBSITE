@@ -56,10 +56,19 @@ body {
 }
 
 .brand {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-teal);
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 65px;
+    width: auto;
+    max-width: 190px;
+    object-fit: contain;
+}
+
+.logo-img:hover {
+    transform: scale(1.02);
 }
 
 nav {
@@ -699,5 +708,10 @@ nav {
 
     .spec-cta h2 {
         font-size: 1.5rem;
+    }
+
+    /* Mobile background fix */
+    body {
+        background-attachment: scroll;
     }
 }
