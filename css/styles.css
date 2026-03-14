@@ -224,6 +224,48 @@ nav {
     box-shadow: var(--shadow-lg);
 }
 
+/* Doctor Section */
+.doctor-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.doctor-profile-grid {
+    display: grid;
+    grid-template-columns: minmax(240px, 320px) 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.doctor-image-wrap {
+    width: 100%;
+}
+
+.doctor-profile-image {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    object-fit: cover;
+}
+
+.doctor-profile-content h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    color: var(--primary-teal);
+    margin-bottom: 0.5rem;
+}
+
+.doctor-role {
+    color: var(--primary-gold);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.doctor-profile-content p {
+    color: var(--text-light);
+    margin-bottom: 0.9rem;
+}
+
 /* Services Section */
 .services {
     padding: 5rem 0;
@@ -602,6 +644,16 @@ nav {
     color: var(--primary-teal);
 }
 
+.spec-title-link {
+    color: var(--primary-teal);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.spec-title-link:hover {
+    color: var(--primary-gold);
+}
+
 .spec-status {
     display: inline-block;
     background: var(--primary-gold);
@@ -619,12 +671,236 @@ nav {
     font-size: 0.95rem;
 }
 
+.spec-card-link {
+    display: inline-block;
+    margin-top: 0.6rem;
+    color: var(--primary-teal);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.spec-card-link:hover {
+    color: var(--primary-gold);
+}
+
 .spec-cta h2 {
     font-family: 'Inter', sans-serif;
     font-size: 2rem;
     font-weight: 700;
     color: var(--primary-teal);
     margin-bottom: 1rem;
+}
+
+/* Info Pages */
+.info-page {
+    min-height: 100vh;
+}
+
+.info-header {
+    margin-top: 80px;
+    padding: 3rem 0 2rem;
+}
+
+.info-header-inner {
+    background: rgba(17, 94, 89, 0.92);
+    color: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.info-header h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.info-header p {
+    opacity: 0.95;
+    margin-bottom: 1.2rem;
+}
+
+.info-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.info-nav a {
+    color: var(--white);
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 8px;
+    padding: 0.45rem 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.info-nav a:hover {
+    background: var(--primary-gold);
+    border-color: var(--primary-gold);
+}
+
+.info-nav a.active {
+    background: var(--primary-gold);
+    border-color: var(--primary-gold);
+}
+
+.info-content {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    padding: 2.2rem;
+    margin-bottom: 3rem;
+}
+
+.info-section {
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid #e8ecef;
+}
+
+.info-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.info-section h2 {
+    color: var(--primary-teal);
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 0.65rem;
+    font-size: 1.35rem;
+}
+
+.info-section p,
+.info-section li {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.info-section ul {
+    margin-left: 1.1rem;
+    margin-top: 0.35rem;
+}
+
+.info-footer {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.92rem;
+    padding: 1rem 0 2rem;
+}
+
+.contact-form-section {
+    border-bottom: 0;
+}
+
+.contact-form-intro {
+    margin-bottom: 1rem;
+}
+
+.contact-form {
+    background: linear-gradient(135deg, rgba(17, 94, 89, 0.04) 0%, rgba(180, 83, 9, 0.05) 100%);
+    border: 1px solid rgba(17, 94, 89, 0.16);
+    border-radius: 14px;
+    padding: 1.4rem;
+}
+
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.form-field label {
+    color: var(--primary-teal);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    border: 1px solid rgba(17, 94, 89, 0.25);
+    border-radius: 10px;
+    padding: 0.75rem 0.85rem;
+    font: inherit;
+    color: var(--text-dark);
+    background: var(--white);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: var(--primary-teal);
+    box-shadow: 0 0 0 3px rgba(17, 94, 89, 0.12);
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.form-field.full-width {
+    grid-column: 1 / -1;
+}
+
+.consent-field {
+    margin-top: -0.25rem;
+}
+
+.consent-label {
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+.consent-label input {
+    margin-top: 0.2rem;
+}
+
+.contact-submit-btn {
+    margin-top: 0.3rem;
+}
+
+.contact-submit-btn:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-helper {
+    color: var(--text-light);
+    font-size: 0.88rem;
+    margin-top: 0.35rem;
+}
+
+.form-alert {
+    border-radius: 10px;
+    padding: 0.75rem 0.9rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.form-alert-success {
+    color: var(--primary-teal);
+    border: 1px solid rgba(17, 94, 89, 0.22);
+    background: rgba(17, 94, 89, 0.1);
+}
+
+.hidden-field {
+    display: none;
 }
 @media (max-width: 768px) {
     .hamburger {
@@ -683,6 +959,14 @@ nav {
         grid-template-columns: 1fr;
     }
 
+    .doctor-profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor-profile-content h2 {
+        font-size: 1.6rem;
+    }
+
     .timeline {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -708,6 +992,23 @@ nav {
 
     .spec-cta h2 {
         font-size: 1.5rem;
+    }
+
+    .info-header {
+        margin-top: 70px;
+        padding: 2rem 0 1.2rem;
+    }
+
+    .info-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .info-content {
+        padding: 1.4rem;
+    }
+
+    .contact-form-grid {
+        grid-template-columns: 1fr;
     }
 
     /* Mobile background fix */

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - OmHomeo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Contact Us - Om Homeo Clinic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
+    <header class="navbar">
         <div class="container">
             <div class="brand">
                 <img src="Images/OMHomeoLOGO.png" alt="Om Homeo Logo" class="logo-img">
@@ -19,58 +19,157 @@
                     <span></span>
                     <span></span>
                 </div>
-                <ul id="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="pages/piles.html">Piles</a></li>
-                    <li><a href="pages/fissure.html">Fissure</a></li>
-                    <li><a href="pages/fistula.html">Fistula</a></li>
-                    <li><a href="pages/skin.html">Skin</a></li>
-                    <li><a href="pages/pcos.html">PCOS</a></li>
-                    <li><a href="pages/pcod.html">PCOD</a></li>
-                    <li><a href="pages/depression.html">Depression</a></li>
-                    <li><a href="pages/anxiety.html">Anxiety</a></li>
-                    <li><a href="pages/autism.html">Autism</a></li>
-                    <li><a href="pages/adhd.html">ADHD</a></li>
-                    <li><a href="pages/thyroid.html">Thyroid</a></li>
-                    <li><a href="pages/obesity.html">Obesity</a></li>
-                    <li><a href="pages/hair-fall.html">Hair Fall</a></li>
-                    <li><a href="pages/alopecia.html">Alopecia</a></li>
-                    <li><a href="pages/acne.html">Acne</a></li>
-                    <li><a href="pages/blemishes.html">Blemishes</a></li>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="specializations.html" class="nav-link">Specializations</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main class="container" style="margin-top: 100px;">
-        <section>
+
+    <main class="container info-content" style="margin-top: 120px;">
+        <section class="doctor-section" style="padding-top: 0; padding-bottom: 2rem;">
+            <h2>Dr. Amarpali, BHMS</h2>
+            <p class="doctor-role">Founder – Om Homeo Centre</p>
+            <div class="doctor-profile-grid">
+                <div class="doctor-image-wrap">
+                    <img src="Images/DoctorImage.jpeg" alt="Dr. Amarpali, BHMS" class="doctor-profile-image">
+                </div>
+                <div class="doctor-profile-content">
+                    <p>Dr. Amarpali is an experienced homeopathic physician with 15+ years of clinical practice and expertise in chronic and recurring illnesses through individualized care.</p>
+                    <p>Since 2015, over 15,000 patients have trusted Om Homeo Centre for gentle, personalized, and consistent homeopathic treatment and follow-up support.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section contact-form-section">
             <h2>Get in Touch</h2>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+            <p class="contact-form-intro">Share your health concern and preferred contact method. Our clinic team will review your request and connect with you.</p>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+            <div id="contact-form-success" class="form-alert form-alert-success" hidden>
+                Thank you. Your message was sent successfully. We will contact you shortly.
+            </div>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+            <form id="contact-form" class="contact-form" action="https://formsubmit.co/doctorerry@gmail.com" method="POST" novalidate>
+                <input type="hidden" name="_subject" value="New Patient Inquiry - Om Homeo">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" id="contact-next-url" name="_next" value="https://www.omhomeo.com/contact.html?submitted=true">
+                <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off">
 
-                <button type="submit" class="btn">Send Message</button>
+                <div class="contact-form-grid">
+                    <div class="form-field">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" minlength="2" maxlength="80" autocomplete="name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" maxlength="120" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" inputmode="tel" pattern="[0-9+\-\s]{8,20}" minlength="8" maxlength="20" autocomplete="tel" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="inquiryType">Inquiry Type</label>
+                        <select id="inquiryType" name="inquiry_type" required>
+                            <option value="" disabled selected>Select inquiry type</option>
+                            <option value="New Consultation">New Consultation</option>
+                            <option value="Follow-up">Follow-up</option>
+                            <option value="Treatment Plan">Treatment Plan</option>
+                            <option value="General Question">General Question</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="preferredContact">Preferred Contact Method</label>
+                        <select id="preferredContact" name="preferred_contact" required>
+                            <option value="" disabled selected>Select preferred method</option>
+                            <option value="Phone Call">Phone Call</option>
+                            <option value="WhatsApp">WhatsApp</option>
+                            <option value="Email">Email</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Short subject" minlength="3" maxlength="120" required>
+                    </div>
+
+                    <div class="form-field full-width">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" minlength="10" maxlength="1000" placeholder="Please describe symptoms, duration, and any current treatment." required></textarea>
+                        <p class="form-helper"><span id="message-count">0</span>/1000 characters</p>
+                    </div>
+
+                    <div class="form-field full-width consent-field">
+                        <label class="consent-label" for="consent">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            I confirm the information shared is accurate and I agree to be contacted by Om Homeo.
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="cta-btn contact-submit-btn" id="contact-submit-btn">Send Message</button>
+                <p class="form-helper">Typical response time: within 24 working hours.</p>
             </form>
         </section>
-        <section>
+
+        <section class="info-section">
             <h2>Contact Information</h2>
-            <p>If you have any questions or need further information, feel free to reach out to us:</p>
-            <p>Email: doctorerry@gmail.com</p>
-            <p>Phone: +91 78370 74388</p>
+            <p>Email: <a href="mailto:doctorerry@gmail.com" class="contact-email">doctorerry@gmail.com</a></p>
+            <p>Phone: <a href="tel:+917837074388" class="contact-phone">+91 78370 74388</a></p>
+            <p>Phone (Alt): <a href="tel:+918360323818" class="contact-phone-secondary">+91 83603 23818</a></p>
+            <p>WhatsApp: <a href="https://wa.me/917837074388" target="_blank" rel="noopener noreferrer" class="contact-whatsapp">+91 78370 74388</a></p>
+            <p>Website: <a href="https://www.omhomeo.com" target="_blank" rel="noopener noreferrer" class="contact-website">www.omhomeo.com</a></p>
+            <p>Address: <span class="contact-address">Baddi, Himachal Pradesh, India (Near Chandigarh)</span></p>
         </section>
+
     </main>
-    <footer>
+
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2023 Om Homeo. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Om Homeo Clinic</h3>
+                    <p>✓ HIPAA Compliant</p>
+                    <p>✓ GDPR Compliant</p>
+                    <p>International homeopathic care from Baddi, Himachal Pradesh</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="specializations.html" class="footer-link">Specializations</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>📍 <span class="contact-address">Baddi, Himachal Pradesh, India (Near Chandigarh)</span></p>
+                    <p>📞 <a href="tel:+917837074388" class="phone-link contact-phone">+91 78370 74388</a></p>
+                    <p>📧 <a href="mailto:doctorerry@gmail.com" class="email-link contact-email">doctorerry@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Data Security</h3>
+                    <p>All patient data is encrypted and handled in compliance with HIPAA and GDPR regulations.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Om Homeo Clinic. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <script src="js/navigation.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/contact-form.js"></script>
 </body>
 </html>

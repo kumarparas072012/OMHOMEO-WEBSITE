@@ -17,16 +17,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // CTA Button with ripple effect
-    const ctaBtn = document.querySelector('.cta-btn');
-    if (ctaBtn) {
-        ctaBtn.addEventListener('click', function(e) {
-            createRipple(e, ctaBtn);
-            alert('Redirecting to booking page...\n\nThis would connect to your telemedicine booking system.');
-            // Replace with actual booking URL
-            // window.location.href = 'https://booking.omhomeo.com';
+    // Booking CTA buttons
+    const bookingButtons = document.querySelectorAll('.cta-btn[data-booking="true"]');
+    bookingButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            createRipple(e, button);
+            const bookingUrl = button.getAttribute('data-booking-url');
+            if (bookingUrl) {
+                window.location.href = bookingUrl;
+            }
         });
-    }
+    });
 
     // Smooth scroll for anchor links
     const allLinks = document.querySelectorAll('a[href^="#"]');
