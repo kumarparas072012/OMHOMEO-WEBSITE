@@ -4,9 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    const submitButton = document.getElementById('contact-submit-btn');
+    const warningBanner = document.getElementById('contact-form-warning');
+    const isHttpContext = window.location.protocol === 'http:' || window.location.protocol === 'https:';
+
     const nextUrlField = document.getElementById('contact-next-url');
     if (nextUrlField) {
-        nextUrlField.value = `${window.location.origin}${window.location.pathname}?submitted=true`;
+        nextUrlField.value = isHttpContext
+            ? `${window.location.origin}${window.location.pathname}?submitted=true`
+            : 'https://www.omhomeo.com/contact.html?submitted=true';
     }
 
     const successBanner = document.getElementById('contact-form-success');
@@ -26,7 +32,27 @@ document.addEventListener('DOMContentLoaded', () => {
         messageInput.addEventListener('input', updateCount);
     }
 
-    const submitButton = document.getElementById('contact-submit-btn');
+    if (!isHttpContext) {
+        if (warningBanner) {
+            warningBanner.hidden = false;
+        }
+
+        contactForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            if (warningBanner) {
+                warningBanner.hidden = false;
+                warningBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Start local server to submit';
+        }
+
+        return;
+    }
+
     const allowedPatterns = {
         name: /^[A-Za-z][A-Za-z\s.'-]{1,79}$/,
         email: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,

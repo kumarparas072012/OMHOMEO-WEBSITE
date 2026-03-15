@@ -34,8 +34,21 @@ The project consists of the following files and directories:
 ## Setup Instructions
 
 1. Clone the repository or download the project files.
-2. Open the project in your preferred web browser.
+2. Run a local web server from the project root:
+   - `python3 -m http.server 8080`
+3. Open `http://localhost:8080/` in your browser.
 3. Navigate through the homepage and explore the various health topics.
+
+## Contact Form Note
+
+- The contact form uses FormSubmit and must be opened through `http://` or `https://`.
+- Opening pages directly as local files (`file://`) will not submit the form.
+
+## Google Review Sync
+
+- To refresh the 5-star review dataset from configured Google Maps links, run:
+  - `node scripts/sync-google-reviews.mjs`
+- This updates `js/google-reviews-data.js` automatically.
 
 ## Contributing
 

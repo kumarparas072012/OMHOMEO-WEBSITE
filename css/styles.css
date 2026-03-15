@@ -266,6 +266,227 @@ nav {
     margin-bottom: 0.9rem;
 }
 
+.section-heading {
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.section-eyebrow {
+    color: var(--primary-gold);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.82rem;
+    margin-bottom: 0.6rem;
+}
+
+.section-heading h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.2rem;
+    color: var(--primary-teal);
+    margin-bottom: 0.9rem;
+}
+
+.section-heading p {
+    color: var(--text-light);
+}
+
+.trust-media-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, rgba(17, 94, 89, 0.06) 0%, rgba(180, 83, 9, 0.05) 100%);
+}
+
+.trust-media-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.social-banner-block {
+    margin-top: 2rem;
+}
+
+.social-banner-block-secondary {
+    margin-top: 2.5rem;
+}
+
+.social-banner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-banner-header h3 {
+    font-family: 'Inter', sans-serif;
+    color: var(--primary-teal);
+    font-size: 1.5rem;
+}
+
+.marquee-shell {
+    overflow: hidden;
+    position: relative;
+    border-radius: 18px;
+}
+
+.marquee-track {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    animation: marqueeScroll 28s linear infinite;
+}
+
+.marquee-track-slow {
+    animation-duration: 34s;
+}
+
+.marquee-shell:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+.marquee-card {
+    min-width: 320px;
+    max-width: 320px;
+    background: var(--white);
+    border-radius: 18px;
+    padding: 1.35rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(17, 94, 89, 0.08);
+}
+
+.marquee-label {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(17, 94, 89, 0.1);
+    color: var(--primary-teal);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.marquee-card h4 {
+    font-family: 'Inter', sans-serif;
+    color: var(--primary-teal);
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+}
+
+.marquee-thumb-wrap {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 0.8rem;
+}
+
+.marquee-thumb {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.marquee-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 0.7rem;
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.marquee-stars {
+    color: var(--primary-gold);
+    letter-spacing: 0.04em;
+}
+
+.marquee-score {
+    color: var(--primary-teal);
+}
+
+.marquee-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 0.9rem;
+}
+
+.marquee-card a {
+    color: var(--primary-gold);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.marquee-card a:hover {
+    color: var(--primary-teal);
+}
+
+.presence-card {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(17, 94, 89, 0.08);
+}
+
+.presence-badge {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(17, 94, 89, 0.1);
+    color: var(--primary-teal);
+    font-weight: 700;
+    font-size: 0.82rem;
+    margin-bottom: 1rem;
+}
+
+.presence-card h3 {
+    font-family: 'Inter', sans-serif;
+    color: var(--primary-teal);
+    font-size: 1.4rem;
+    margin-bottom: 0.9rem;
+}
+
+.presence-card p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.presence-stars {
+    color: #f59e0b;
+    letter-spacing: 0.18em;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.presence-list {
+    margin-left: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+.presence-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    align-items: center;
+}
+
+.secondary-link {
+    color: var(--primary-teal);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.secondary-link:hover {
+    color: var(--primary-gold);
+}
+
 /* Services Section */
 .services {
     padding: 5rem 0;
@@ -540,6 +761,15 @@ nav {
     to {
         transform: scale(4);
         opacity: 0;
+    }
+}
+
+@keyframes marqueeScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
     }
 }
 
@@ -899,6 +1129,12 @@ nav {
     background: rgba(17, 94, 89, 0.1);
 }
 
+.form-alert-warning {
+    color: var(--primary-gold);
+    border: 1px solid var(--primary-gold);
+    background: var(--white);
+}
+
 .hidden-field {
     display: none;
 }
@@ -951,7 +1187,8 @@ nav {
     }
 
     .services h2,
-    .process h2 {
+    .process h2,
+    .section-heading h2 {
         font-size: 1.8rem;
     }
 
@@ -961,6 +1198,20 @@ nav {
 
     .doctor-profile-grid {
         grid-template-columns: 1fr;
+    }
+
+    .trust-media-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-banner-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .marquee-card {
+        min-width: 280px;
+        max-width: 280px;
     }
 
     .doctor-profile-content h2 {
