@@ -4,10 +4,6 @@ const brandPresence = {
     youtubeChannelUrl: 'https://www.youtube.com/@omhomeocentrehomeopathican2281/videos'
 };
 
-const manualGoogleReviews = Array.isArray(window.OMHOMEO_GOOGLE_REVIEWS)
-    ? window.OMHOMEO_GOOGLE_REVIEWS
-    : [];
-
 const youtubeBannerItems = [
     {
         label: 'YouTube Video',
@@ -52,6 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const buildFiveStarReviewItems = () => {
+        const manualGoogleReviews = Array.isArray(window.OMHOMEO_GOOGLE_REVIEWS)
+            ? window.OMHOMEO_GOOGLE_REVIEWS
+            : [];
+
         const fiveStarItems = manualGoogleReviews
             .filter((review) => Number(review && review.rating) === 5)
             .map((review) => {
@@ -182,6 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.appendChild(link);
                 track.appendChild(card);
             } catch (error) {
+                console.error('Failed to render banner card:', error);
             }
         });
     };
