@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const queryParams = new URLSearchParams(window.location.search);
     if (queryParams.get('submitted') === 'true' && successBanner) {
         successBanner.hidden = false;
+        // Scroll to success banner immediately so user sees it
+        setTimeout(() => {
+            successBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
     }
 
     const messageInput = document.getElementById('message');
@@ -90,6 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     contactForm.addEventListener('submit', (event) => {
+        // Prevent double submission
+        if (submitButton && submitButton.disabled) {
+            event.preventDefault();
+            return;
+        }
+
         const name = document.getElementById('name');
         const email = document.getElementById('email');
         const phone = document.getElementById('phone');
@@ -121,9 +131,24 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        // Disable submit button and show sending state
         if (submitButton) {
             submitButton.disabled = true;
             submitButton.textContent = 'Sending...';
+            submitButton.style.opacity = '0.6';
+
+            // Safety timeout: if FormSubmit doesn't redirect within 15s, re-enable button
+            setTimeout(() => {
+                if (submitButton.textContent === 'Sending...') {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Submit';
+                    submitButton.style.opacity = '1';
+                    console.warn('Form submission timeout - FormSubmit may be unavailable');
+                }
+            }, 15000);
         }
+
+        // FormSubmit will redirect automatically - no need to prevent default
+        // Let the form submit naturally to FormSubmit.co
     });
 });
